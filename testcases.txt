@@ -1,0 +1,20 @@
+TestCases:
+
+1.	If you Create a valid user with unique data then you should get a successful response with code 200 or 201.
+2.	If you Create a user without firstName and you should get a bad request response code 400.
+3.	If you Create a user without lastName and you should get a bad request response with code 400.
+4.	If you Create a user without phoneNumber and you should get a bad request response with code 400.
+5.	If you Create a user without emailId and you should get a bad request response with code 400.
+6.	If you Create a user without roll-number in the header and you should get an unauthorized response with code 401.
+7.	If you Create a user with an invalid roll-number and you should get a bad request with code 400 or unauthorized response with code401.
+8.	If you Createe two users with the same phoneNumber and you should get the second request to return a bad request response with code 400.
+9.	If you Create two users with the same emailId and you should get the second request to return a bad request response with code 400.
+10.	If you Create a user with an invalid phoneNumber format and you should get a bad request response with code 400.
+11.	If you Create a user with an invalid emailId format and you should get a bad request response with code 400.
+12.	If you Create with special characters in firstName or lastName and you should get the API to handle it gracefully with code 200 or 400.
+13.	If you Create a user with extra fields in the request body and you should get the API to either ignore them with code 200 or return a bad request response with code 400
+14.	If you Create a user with empty strings for required fields and you should get a bad request response with code 400.
+15.	If you Send multiple requests concurrently , you should get the API to handle them gracefully with code 200 or 201.
+16.	If you Test for rate limiting by sending a large number of requests, you should get the API to block or slow down subsequent requests with code 429.
+17.	If you Create a user with SQL injection in firstName or lastName, you should get the API to reject with code 400 or sanitize the input with code 200.
+18.	If you Create a user with HTML or JavaScript code in emailId, you should get the API to reject with code 400 or sanitize the input with code 200.
